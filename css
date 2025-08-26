@@ -1,0 +1,68 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #111;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.site-header h1 {
+  margin: 0;
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.site-nav li {
+  margin-left: 1rem;
+}
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+}
+.site-nav a:hover {
+  color: #000;
+}
+
+/* Works Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.work-item img {
+  width: 100%;
+  display: block;
+}
+.work-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Bio Section */
+.bio-section {
+  padding: 2rem;
+}
+.bio-section h2 {
+  margin-top: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 2rem;
+}
