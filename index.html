@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artist Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark; }
+    .noise::before{
+      content:"";position:fixed;inset:0;pointer-events:none;mix-blend:soft-light;opacity:.5;
+      background:
+        radial-gradient(60rem 40rem at 20% 10%,rgba(255,255,255,.08),transparent),
+        radial-gradient(50rem 30rem at 80% 10%,rgba(255,255,255,.06),transparent);
+    }
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .card:hover .img{transform:scale(1.03)}
+    .fadein{opacity:0;transform:translateY(8px);animation:fade .6s ease forwards}
+    @keyframes fade{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 selection:bg-white/20 noise">
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur border-b border-white/10 bg-zinc-950/40">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 h-14 flex items-center justify-between">
+      <a id="brand" href="#" class="font-semibold tracking-tight">Your Name</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#work" class="opacity-80 hover:opacity-100">Work</a>
+        <a href="#about" class="opacity-80 hover:opacity-100">About</a>
+        <a href="#contact" class="opacity-80 hover:opacity-100">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <section class="relative pt-24 md:pt-36 pb-16 md:pb-24">
+      <div class="mx-auto max-w-6xl px-4 md:px-6">
+        <div class="grid md:grid-cols-12 gap-8 items-end">
+          <div class="md:col-span-8">
+            <h1 id="title" class="fadein text-5xl md:text-7xl font-semibold tracking-tight">Your Name</h1>
+            <p class="fadein mt-4 text-base md:text-lg text-zinc-300" style="animation-delay:.08s">
+              Artist / Installation / Mixed Media
+            </p>
+          </div>
+          <div class="md:col-span-4">
+            <div class="fadein rounded-2xl border border-white/10 p-4 md:p-5 bg-gradient-to-br from-white/5 to-white/0" style="animation-delay:.12s">
+              <p class="text-sm text-zinc-300 leading-relaxed">
+                I compose images, objects and spaces where fiction bleeds into matter. This is a cinematic, Cargo‑style minimal portfolio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute -z-10 inset-0 flex items-start justify-center">
+        <div class="mt-24 h-64 w-[80%] max-w-5xl blur-3xl bg-gradient-to-r from-indigo-500/20 via-fuchsia-500/10 to-cyan-500/20 rounded-full"></div>
+      </div>
+    </section>
+
+    <section id="work" class="mx-auto max-w-6xl px-4 md:px-6 pb-20 md:pb-28">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl md:text-2xl font-semibold tracking-tight">Selected Works</h2>
+        <div class="text-sm text-zinc-400">6 projects</div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Card 1 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-indigo-500/30 to-cyan-500/30"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Spectral Substrate</div>
+              <div class="text-xs text-zinc-400 mt-1">Installation · 2025</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-fuchsia-500/30 to-violet-500/30"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Cipher Reliquary</div>
+              <div class="text-xs text-zinc-400 mt-1">Object · 2024</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+        <!-- Card 3 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-sky-500/30 to-teal-500/30"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Blue Gargoyle</div>
+              <div class="text-xs text-zinc-400 mt-1">Painting · 2024</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+        <!-- Card 4 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-zinc-200/20 to-zinc-50/0"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Phantom Mane</div>
+              <div class="text-xs text-zinc-400 mt-1">Mixed Media · 2025</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+        <!-- Card 5 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-emerald-500/20 to-lime-500/10"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Ruinality Study VI</div>
+              <div class="text-xs text-zinc-400 mt-1">Series · 2025</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+        <!-- Card 6 -->
+        <a href="#" class="card block overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40">
+          <div class="aspect-[4/3] w-full overflow-hidden">
+            <div class="img h-full w-full transition-transform duration-500 bg-gradient-to-br from-rose-500/20 to-amber-500/20"></div>
+          </div>
+          <div class="p-4 md:p-5 flex items-center justify-between">
+            <div>
+              <div class="text-zinc-100 font-medium tracking-tight">Heterotopia Bench</div>
+              <div class="text-xs text-zinc-400 mt-1">Object · 2023</div>
+            </div>
+            <span class="text-[11px] px-2 py-1 rounded-full border border-white/10 text-zinc-300">View</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-3xl px-4 md:px-6 pb-20 md:pb-28">
+      <h2 class="text-xl md:text-2xl font-semibold tracking-tight mb-4">About</h2>
+      <p class="text-zinc-300 leading-relaxed">
+        Replace placeholders with your works. Edit text in this file, upload to GitHub (or Netlify/Vercel) and bind your domain. No build tools required.
+      </p>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-3xl px-4 md:px-6 pb-24 md:pb-32">
+      <h2 class="text-xl md:text-2xl font-semibold tracking-tight mb-4">Contact</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <a id="emailLink" href="#" class="hidden text-sm px-3 py-1.5 rounded-full border border-white/10 text-zinc-200 hover:bg-white/5">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 h-16 flex items-center justify-between text-sm text-zinc-400">
+      <span id="copyright">© <span id="year"></span> Your Name</span>
+      <span>Single-file, Cargo‑style</span>
+    </div>
+  </footer>
+
+  <script>
+    // Allow ?name=Your%20Name&email=you@example.com to override
+    const usp = new URLSearchParams(location.search);
+    const name = usp.get('name') || 'Your Name';
+    const email = usp.get('email') || '';
+    document.getElementById('brand').textContent = name;
+    document.getElementById('title').textContent = name;
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('copyright').lastChild && (document.getElementById('copyright').lastChild.textContent = ' ' + name);
+    if (email){
+      const a = document.getElementById('emailLink');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+      a.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
